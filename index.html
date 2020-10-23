@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./eventEmitter.js"></script>
+    <script src="./compiler.js"></script>
+    <script src="./observer.js"></script>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{msg}}</p>
+        <span>{{age}}</span>
+        <p v-text="msg"></p>
+        <input v-model="msg" type="text">
+    </div>
+
+    <script>
+        const vm=new Vue({
+            el:'#app',
+            data:{
+                msg:'哈哈',
+                age:10
+            }
+        })
+        console.log(vm)
+    </script>
+</body>
+</html>
